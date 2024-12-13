@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Here’s a guide to the shapes you should use for each step in a flowchart, based on standard flowchart conventions:
 
-## Getting Started
+1. **Start**: **Oval**
 
-First, run the development server:
+   - Shape: Represents the beginning of the process.
+   - Text: "Start: User enters full name and email."
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Process**: **Rectangle**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   - Shape: Represents a specific action or step.
+   - Example: "Send OTP to the user's email" or "Create a new user document."
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Decision**: **Diamond**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   - Shape: Represents a decision point with branching paths.
+   - Example: "Does the user already exist?"
 
-## Learn More
+4. **Connector**: **Arrow**
 
-To learn more about Next.js, take a look at the following resources:
+   - Shape: Represents the flow between steps.
+   - Example: Arrow connecting "Does the user already exist?" to subsequent steps like "Yes" or "No."
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **End**: **Oval**
+   - Shape: Represents the termination of the process.
+   - Text: "End: User authenticated and logged in."
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Here’s how you can map your flow:
 
-## Deploy on Vercel
+1. **Oval**: Start
+2. **Rectangle**: "Enter full name and email."
+3. **Diamond**: "Does the user already exist?"
+   - **Yes**: **Rectangle** for "Send OTP to email."
+   - **No**: **Rectangle** for "Create new user document," followed by **Rectangle** for "Send OTP to email."
+4. **Rectangle**: "Send secret key for session."
+5. **Rectangle**: "Return account ID."
+6. **Rectangle**: "Verify OTP and authenticate."
+7. **Oval**: End
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Let me know if you need a visual version or further explanation!
