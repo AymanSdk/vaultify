@@ -1,6 +1,6 @@
 "use client";
 
-import { createAccount } from "@/lib/actions/user.actions";
+import { createAccount, signInUser } from "@/lib/actions/user.actions";
 
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -37,7 +37,7 @@ const authFormSchema = (formType: FormType) => {
 const AuthForm = ({ type }: { type: FormType }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [accountId, setAccountId] = useState(false); // TODO : CHECK IF accountId IS NEEDED
+  const [accountId, setAccountId] = useState(null); // TODO : CHECK IF accountId IS NEEDED
 
   const formSchema = authFormSchema(type);
 
@@ -54,10 +54,13 @@ const AuthForm = ({ type }: { type: FormType }) => {
     setErrorMessage("");
 
     try {
-      const user = await createAccount({
-        fullName: values.fullName || "",
-        email: values.email,
-      });
+      const user =
+        type === "sign-up"
+          ? await createAccount({
+              fullName: values.fullName || "",
+              email: values.email,
+            })
+          : await signInUser({ email: values.email });
 
       setAccountId(user.accountId);
     } catch {
@@ -148,7 +151,6 @@ const AuthForm = ({ type }: { type: FormType }) => {
           </div>
         </form>
       </Form>
-      {/* OTP VERIFICATION HERE */}
 
       {accountId && (
         <OTPModal email={form.getValues("email")} accountId={accountId} />

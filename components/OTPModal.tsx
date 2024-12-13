@@ -9,6 +9,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import { Button } from "./ui/button";
 
 import {
   InputOTP,
@@ -18,7 +19,6 @@ import {
 import Image from "next/image";
 
 import React, { useState } from "react";
-import { Button } from "./ui/button";
 import { sendEmailOTP, verifySecret } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";
 
