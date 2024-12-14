@@ -85,7 +85,7 @@ export const verifySecret = async ({
       path: "/",
       httpOnly: true,
       sameSite: "strict",
-      // secure: true, // TODO : Enable this in production
+      secure: true, // TODO : Enable this in production
     });
 
     return parseStringify({ sessionId: session.$id });
