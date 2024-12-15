@@ -1,4 +1,4 @@
-# Store It - Documentation
+<h1 style='text-align: center;'>StoreIt documentation</h1> 
 
 ![Alt text](./public/assets/images/Add%20a%20heading.png "Optional Title")
 
@@ -59,7 +59,7 @@ This application leverages **Next.js 15**, **TypeScript**, **TailwindCSS**, and 
 - **Node.js**: Ensure Node.js (v16+) is installed on your system.
 - **Appwrite Setup**: Configure your Appwrite instance with necessary databases and storage.
 
-<u>### Installation<u/>
+### Installation
 
 1. Clone the repository:
    ```bash
