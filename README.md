@@ -10,6 +10,8 @@ This application leverages **Next.js 15**, **TypeScript**, **TailwindCSS**, and 
 
 ---
 
+## ![Image](./public/assets/images/firefox_Ev0XSVKFCg.png)
+
 ## Tech Stack
 
 - **React 19**
