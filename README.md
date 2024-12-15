@@ -59,7 +59,7 @@ This application leverages **Next.js 15**, **TypeScript**, **TailwindCSS**, and 
 - **Node.js**: Ensure Node.js (v16+) is installed on your system.
 - **Appwrite Setup**: Configure your Appwrite instance with necessary databases and storage.
 
-### Installation
+<u>### Installation<u/>
 
 1. Clone the repository:
    ```bash
